@@ -41,7 +41,8 @@ mavenNode{
       stage('Build Release'){
         mavenCanaryRelease {
           version = canaryVersion
-          archiveTestResults = true
+          archiveTestResults=true
+          https://github.com/jstrachan/demovertx18/blob/master/Jenkinsfile#L43
         }
       }
       
@@ -50,7 +51,6 @@ mavenNode{
           environment = 'Test'
           failIfNoTests = localFailIfNoTests
           itestPattern = localItestPattern
-          archiveTestResults = true
         }
       }
     }
