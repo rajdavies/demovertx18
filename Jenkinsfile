@@ -41,6 +41,7 @@ mavenNode{
       stage('Build Release'){
         mavenCanaryRelease {
           version = canaryVersion
+          archiveTestResults = true
         }
       }
       
@@ -49,6 +50,7 @@ mavenNode{
           environment = 'Test'
           failIfNoTests = localFailIfNoTests
           itestPattern = localItestPattern
+          archiveTestResults = true
         }
       }
     }
